@@ -45,7 +45,7 @@ empty_message: Just an empty message
 
 ```tsv
 # output
-
+key	value
 signup.first_name.label	First name
 signup.first_name.placeholder	Insert your first name
 signup.last_name.label	Last name
