@@ -16,10 +16,11 @@ if (isset($argv[2])) {
     $outputToFile = true;
     $outputToCli = false;
     $outputFile = fopen($argv[2], 'w') or die('Error trying to write to output file.' . PHP_EOL);
+    fwrite($outputFile, "key\tvalue");
 } else {
     $outputToFile = false;
     $outputToCli = true;
-    $outputCli = '';
+    $outputCli = "key\tvalue";
 }
 
 // parsing yaml file into array.
@@ -28,7 +29,6 @@ if (function_exists('yaml_parse_file')) {
 } else {
     die('YAML extension is not installed.' . PHP_EOL);
 }
-
 
 // iterating in the root nodes.
 foreach ($fileInArray as $key => $value) {
@@ -66,14 +66,13 @@ function prepareOutput($key, $value)
     }
 }
 
-
 // outputing.
 if ($outputToFile) {
     fclose($outputFile);
 }
 
 if ($outputToCli) {
-    echo $outputCli;
+    echo $outputCli . PHP_EOL;
 }
 
 return;

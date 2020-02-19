@@ -1,0 +1,21 @@
+signup:
+  first_name:
+    label: First name
+    placeholder: Insert your first name
+  last_name:
+    label: Last name
+    placeholder: Insert your last name
+  email:
+    label: E-mail
+    placeholder: Insert your email address
+  password:
+    label: Password
+    placeholder: Insert your password
+login:
+  email:
+    label: E-mail
+    placeholder: Insert your email address
+  password:
+    label: Password
+    placeholder: Insert your password
+empty_message: Just an empty message
